@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Latihan kondisi</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="card text-white bg-primary mb-3" style="max-width: 18rem;margin-left: auto;margin-right: auto;">
+        <div class="card-header">Kalkulator</div>
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col">
+              <input id="x" type="text" class="form-control" >
+            </div>
+
+            <div class="col">
+              <select id="mat" class="form-select" name="smstr" style="width: 5rem;">
+                <option selected>Pilih</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+              </select>
+            </div>
+
+            <div class="col">
+              <input id="y" type="text" class="form-control" >
+            </div>
+
+            <div class="col-12" >
+              <h1 id="has" style="display: none;"></h1>
+            </div>
+
+            <div class="col-12">
+              <button onclick="my()" class="btn btn-success">klik</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>	
+    function my() {
+      var x = parseInt(document.getElementById("x").value);
+      var y = parseInt(document.getElementById("y").value);
+      var z = (document.getElementById("mat").value);
+      
+      if(z==="+"){
+        var a = x+y;
+        document.getElementById("has").innerHTML= a;
+        document.getElementById("has").style.display="block";
+      }else{
+        var a = x-y;
+        document.getElementById("has").innerHTML= a;
+        document.getElementById("has").style.display="block";
+      }
+      
+    }
+    </script>
+
+  </body>
+</html>

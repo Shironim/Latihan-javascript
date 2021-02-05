@@ -38,5 +38,29 @@ function munculkan(){
 }
 
 // password checker 
+function pwdChecker(){
+  const pwd = document.getElementById('password').value;
+  const pwd2 = document.getElementById('password2').value;
+  // const patt = /[0-9]/;
+  if (pwd != pwd2) {
+    document.getElementById('demo').innerHTML = "Password beda";
+  }else{
+    alert('Selamat');
+  }
+
+}
 // input data //ditambah dengan string method
+function biodata(){
+  const namaDepan = document.getElementById('namaDepan').value;
+  const namaBelakang = document.getElementById('namaBelakang').value;
+  const tempatLhr = document.getElementById('tempatLhr').value;
+  const tanggal = document.getElementById('tanggal').value;
+  const bulan = document.getElementById('bulan').value;
+  const tahun = document.getElementById('tahun').value;
+  const alamat = document.getElementById('alamat').value;
+
+  document.getElementById('namaLengkap').innerHTML = namaDepan + ' ' + namaBelakang;
+  document.getElementById('ttl').innerHTML = tempatLhr + ', ' + tanggal + ' ' + bulan + ' ' + tahun;
+  document.getElementById('almt').innerHTML = alamat;
+}
 // buat objek mobil -> tampilkan nilainya

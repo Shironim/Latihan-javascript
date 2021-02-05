@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+</head>
+<body>
+    <p>Masukkan Bilangan 1 </p>
+    <input type="number" id="bil1"><br>
+    <p>Masukkan Bilangan 2 </p>
+    <input type="number" id="bil2"><br>
+    <select name="hitung" id="hitung">
+        <option value="+">Tambah (+)</option>
+        <option value="-">Kurang (-)</option>
+        <option value="*">Kali (*)</option>
+        <option value="/">Bagi (/)</option>
+    </select>
+    <input type="submit" value="Klik" onclick="kalkulator()"><br><br>
+    <p>Hasil</p>
+    <input type="text" id="hasil">
+    <script src="kalkulator.js"></script>
+</body>
+</html>

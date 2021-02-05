@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta nama="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Latihan objek</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+        <div id="fom" class="card text-white bg-primary mb-3" style="max-width: 18rem;margin-left: auto;margin-right: auto;">
+            <div  class="card-body">
+                <div>
+                    <label for="nama" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="nama">
+                </div>
+                <div>
+                    <label for="umur" class="form-label">Umur</label>
+                    <input type="text" class="form-control" id="umur">
+                </div>
+                <div>
+                    <label for="hobi" class="form-label">Hobi</label>
+                    <input type="text" class="form-control" id="hobi">
+                </div>
+
+                <div class="col-12 mt-1">
+                    <button onclick="myfun()" class="btn btn-success">klik</button>
+                  </div>
+            </div>
+        </div>    
+
+        <div id="tulis" class="card text-white bg-primary mb-3" style="max-width: 18rem;margin-left: auto;margin-right: auto;display: none;">
+            <div class="card-body">
+                <p id="demo"></p>
+            </div>
+        </div>
+    </div>    
+
+    <script>
+        function myfun(){
+            let person = {nama:"i", umur:0, hobi:"k"};
+            person.nama = document.getElementById("nama").value;
+            person.umur = document.getElementById("umur").value;
+            person.hobi = document.getElementById("hobi").value;
+
+            document.getElementById("tulis").style.display= "block";
+            document.getElementById("fom").style.display= "none";
+            document.getElementById("demo").innerHTML = "nama saya " + person.nama + " dan umur saya " + person.umur + " tahun , saya memiliki hobi " + person.hobi;
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To DO List</title>
+  <style>
+    html{
+      font-size:15px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    *{
+      padding:0;
+      margin:0;
+      box-sizing: border-box;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+    }
+    .container{
+      width:600px
+    }
+    header{
+      width:100%;
+      height: auto;
+      text-align:center;
+      background-color: #50B2C0;
+    }
+    .inner-header{
+      padding: 15px;
+    }
+    ul{
+      height: 400px;
+      overflow: scroll;
+    }
+    ul li {
+      width:100%;
+      text-decoration: none;
+      list-style-type: none;
+      /* padding: 8px 20px; */
+      height: 50px;
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      transition: ease-in-out 0.1s;
+    }
+    ul li:nth-child(even){
+      background-color: bisque;
+    }
+    ul li:nth-child(odd){
+      background-color: azure;
+    }
+    ul li:hover{
+      /* font-weight: bold; */
+      background-color: #ddd;
+      transition: ease-in-out 0.1s;
+    }
+    .input input[type="text"]{
+      padding: 9px;
+      border-top-left-radius:30px;
+      border-bottom-left-radius:30px;
+      border: none;
+      vertical-align:middle;
+    }
+    .input{
+      margin-top: 20px;
+    }
+    .input .btn{
+      background-color: #FF4000;
+      /* font-weight: bold; */
+      padding: 7px 16px;
+      border: none;
+      vertical-align:middle;
+      border-top-right-radius:30px;
+      border-bottom-right-radius:30px;
+      cursor: pointer;
+      color: #fff;
+    }
+    .close{
+      height: 100%;
+      width: 40px;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 44px;
+      font-weight: bold;
+      transition: ease-in-out 0.1s;
+      cursor: pointer;
+    }
+    .close:hover{
+      background-color: #f44336;
+      color:#fff;
+      font-weight: bold;
+      transition: ease-in-out 0.1s;
+    }
+    .tugas{
+      padding-left: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="inner-header">
+        <h2>To Do List</h2>
+        <div class="input">
+          <input id="input" type="text"><span class="btn" onclick="tambahTodo()">Tambah</span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <ul id="ul">
+        <li>
+          <span class="tugas">Tugas 1</span>
+          <span class="close">x</span>
+        </li>
+        <li>
+          <span class="tugas">Tugas 2</span>
+          <span class="close">x</span>
+        </li>
+        
+      </ul>
+      <p id="demo"></p>
+    </main>
+  </div>
+  <script>
+    var close = document.getElementsByClassName("close");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+        console.log(close.length)
+      }
+
+      function tambahTodo() {
+        let li = document.createElement('li');
+        let span = document.createElement('span');
+        let inputValue = document.getElementById('input').value;
+        let h = document.createTextNode(inputValue);
+        let ul = document.getElementById('ul');
+        let span1 = document.createElement('span');
+        let txt = document.createTextNode('x');
+        span1.classList.add('close');
+        span1.appendChild(txt);
+
+        span.classList.add('tugas')
+        span.appendChild(h);
+        li.appendChild(span);
+        li.appendChild(span1);
+        if (inputValue === '') {
+          alert('Please enter sesuatu');
+        }else{
+          document.getElementById('ul').appendChild(li);
+        }
+        document.getElementById('input').value = '';
+        // document.getElementById('demo').appendChild(li);
+
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

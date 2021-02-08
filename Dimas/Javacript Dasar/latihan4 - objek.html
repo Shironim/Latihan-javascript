@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan Objek</title>
+</head>
+<body>
+  <script>
+    console.log('Latihan Objek');
+
+    // objek construktor
+    function Buku (judul, pengarang, penerbit, ISBN,jumlah) {
+      
+      this.judul = judul;
+      this.pengarang = pengarang;
+      this.penerbit = penerbit;
+      this.ISBN = ISBN;
+      this.jumlah = jumlah;
+
+      this.bukuDipinjam = function(judul){
+        if (jumlah == 0) {
+          alert("Buku Tidak Tersedia!");
+          return false;
+        }
+        this.jumlah -= 1;
+        return this.jumlah
+      }
+      this.bukuDikembalikan = function(judul){
+        this.jumlah += 1;
+        return this.jumlah
+      }
+    }
+
+    var buku1 = new Buku('Ku Cinta Dia', 'Melina','Gramedia','12345abcd',5);
+
+  </script>
+</body>
+</html>

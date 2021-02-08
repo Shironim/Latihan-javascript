@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Ijo</title>
+    <style>
+        table, th, td {
+        border: 1px solid black;
+        }
+        input{
+            width: 50px;
+            background: none;
+            border: none;
+            pointer-events: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Paket Makanan & Minuman</th>
+                <th>Harga</th>
+                <th>Jumlah</th>
+                <th>Tambah</th>
+                <th>Kurang</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Paket 1 (Ayam Kremes + Nasi + Es Teh)</td>
+                <td><input type="number" value="12000" id="harga1"></td>
+                <td><input type="number" value="0" id="paket1"></td>
+                <td>
+                    <button type="submit" id ="tmkn1" >Tambah</button>
+                </td>
+                <td>
+                    <button type="submit" id ="kmkn1" >Kurang</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Paket 2 (Lele Rebus + Nasi + Es Sirup)</td>
+                <td><input type="number" value="10000" id="harga2"></td>
+                <td><input type="number" value="0" id="paket2"></td>
+                <td>
+                    <button type="submit" id ="tmkn2" >Tambah</button>
+                </td>
+                <td>
+                    <button type="submit" id ="kmkn2" >Kurang</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="hitung()">Cek</button>
+    <p>Total</p>
+    <textarea id="total"></textarea>
+</body>
+</html>
+
+<script type="text/javascript">
+    const tambahmakanan1 = document.querySelector('#tmkn1');
+    const kurangmakanan1 = document.querySelector('#kmkn1');
+    const paket1 = document.querySelector('#paket1');
+    const tambahmakanan2 = document.querySelector('#tmkn2');
+    const kurangmakanan2 = document.querySelector('#kmkn2');
+    const paket2 = document.querySelector('#paket2');
+
+    tambahmakanan1.addEventListener('click', ()=>{
+        paket1.value = parseInt(paket1.value)+1;
+    })
+    kurangmakanan1.addEventListener('click', ()=>{
+        if (paket1.value > 0) {
+            paket1.value = parseInt(paket1.value)-1;
+        }
+        else{
+            paket1.value = 0;
+        }
+        
+    })
+    tambahmakanan2.addEventListener('click', ()=>{
+        paket2.value = parseInt(paket2.value)+1;
+    })
+    kurangmakanan2.addEventListener('click', ()=>{
+        if (paket2.value > 0) {
+            paket2.value = parseInt(paket2.value)-1;
+        }
+        else{
+            paket2.value = 0;
+        }
+        
+    })
+    function hitung() {
+        if (paket1 != 0) {
+            const harga1 = parseInt(document.getElementById(harga1).value);
+            const total1 = harga1 * paket1;
+        }
+        if (paket2 != 0){
+            const harga2 = parseInt(document.getElementById(harga2).value);
+            const total2 = harga2 * paket2;
+        }
+        const total = total1 + total2;
+        document.getElementById("total").innerHTML=total;
+    }
+    
+
+    
+</script>

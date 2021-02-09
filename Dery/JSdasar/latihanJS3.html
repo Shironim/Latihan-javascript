@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Random quote</title>
+    <style>
+        /* * {
+            border: 2px solid black;
+        } */
+        #kartu{
+            max-width: 8rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #tampung {
+            margin-top: 19rem;
+        }
+    </style>
+</head>
+<body class="bg-secondary">
+    <div class="container" id="tampung">
+        
+        <div class="card text-white bg-primary mb-3 rounded-pill shadow mb-5" id="kartu">
+            <div class="card-body d-flex">
+                <p></p>
+                <button class="btn btn-danger rounded-pill" id="click" onclick="fun()" value="1">Klik disini</button>
+                <p class="ps-5" id="quote"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("quote").style.display="none";
+        const q = {
+            qut:["Semua mahluk hebat dalam satu hal, tapi tidak dalam segala hal.",
+                "Aku jelek dan aku bangga.",
+                "Kau tidak perlu menang atau kalah dalam permainan, yang penting adalah kau merasa senang.",
+                "Aku jelek dan aku bangga."]
+        };
+        
+        document.getElementById("quote").innerHTML="asdasdasd";
+        function fun(){
+            let angka = q.qut[Math.floor(Math.random() * 4)]
+            document.getElementById("kartu").style.maxWidth="30rem";
+            document.getElementById("quote").innerHTML='"'+angka+'"';
+            document.getElementById("quote").style.display="block";
+        }
+    </script>
+</body>
+</html>

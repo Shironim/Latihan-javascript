@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan Filter Kontak Vanila Js</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Kontak</h1>
+    <input type="text" id='filter' placeholder='Mau Cari Siapa ?'>
+    <ul id="ul">
+      <li class="header">
+        <h5>A</h5>
+      </li>
+      <li class="item">
+        <a href="#">Aku</a>
+      </li>
+      <li class="item">
+        <a href="#">Amat</a>
+      </li>
+      <li class="item">
+        <a href="#">Alu</a>
+      </li>
+      <li class="item">
+        <a href="#">Aba</a>
+      </li>
+      <li class="header">
+        <h5>B</h5>
+      </li>
+      <li class="item">
+        <a href="#">Baba</a>
+      </li>
+      <li class="item">
+        <a href="#">Bondan</a>
+      </li>
+      <li class="item">
+        <a href="#">Bakar</a>
+      </li>
+      <li class="item">
+        <a href="#">Bucan</a>
+      </li>
+      <li class="header">
+        <h5>C</h5>
+      </li>
+      <li class="item">
+        <a href="#">Cahya</a>
+      </li>
+      <li class="item">
+        <a href="#">Cia</a>
+      </li>
+      <li class="item">
+        <a href="#">Ciana</a>
+      </li>
+    </ul>
+  </div>
+  <script>
+    let search = document.querySelector('#filter');
+
+    search.addEventListener('keyup', filterNames);
+
+    function filterNames(){
+      let searchValue = document.querySelector('#filter').value.toUpperCase();
+
+      // Ul
+      let ul = document.querySelector('#ul');
+
+      // Li
+      let li = ul.querySelectorAll('li.item');
+
+      // looping semua li
+      for (let i = 0; i < li.length; i++) {
+        let a = li[i].getElementsByTagName('a')[0];
+        if (a.innerHTML.toUpperCase().indexOf(searchValue) > -1) {
+          li[i].style.display = '';
+          // console.log(a);
+        }else{
+          li[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+</body>
+</html>

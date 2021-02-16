@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Latihan Filter Kontak Vanila Js</title>
+  <!-- Tutorial : https://www.youtube.com/watch?v=G1eW3Oi6uoc&list=TLPQMTUwMjIwMjH-qcujOtsI6w&index=1 -->
 </head>
 <body>
   <div class="container">
@@ -57,25 +58,28 @@
   </div>
   <script>
     let search = document.querySelector('#filter');
-
+    // listen to every keyup on keyboard
     search.addEventListener('keyup', filterNames);
-
+    
     function filterNames(){
+      // get the input value
       let searchValue = document.querySelector('#filter').value.toUpperCase();
 
-      // Ul
+      // get Ul
       let ul = document.querySelector('#ul');
 
-      // Li
+      // get all Li in ul
       let li = ul.querySelectorAll('li.item');
 
       // looping semua li
       for (let i = 0; i < li.length; i++) {
         let a = li[i].getElementsByTagName('a')[0];
+        // if that li same as input value
         if (a.innerHTML.toUpperCase().indexOf(searchValue) > -1) {
           li[i].style.display = '';
           // console.log(a);
         }else{
+          // if not do display none
           li[i].style.display = 'none';
         }
       }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Function</title>
+</head>
+<body>
+  <script>
+    // penulisan function
+    // function declaration
+    function hai(hello){
+      console.log(hello)
+    }
+    // pemanggilan
+    hai('Dimas')
+
+    // function expression
+    // let hai = function(hello){
+    //   console.log(hello)
+    // }
+
+    // pemanggilan
+    // hai('Seto')
+
+    // NB: Notice that in the both examples, our function has a name which means each time we declare a function it must has a name, it can’t be anonymous. Also, the use of the keywords return and function and curly brackets, and parentheses for parameters is mandatory.
+
+    // An arrow function expression is a compact alternative to a traditional function expression, but is limited and can’t be used in all situations.
+
+    // Arrow function adalah bentuk ES6 dari function expression di ES5
+    // dengan penyingkatan sintaks dan mampu menghandle 'this'
+
+    // jika hanya ada 1 parameter, bisa mengilangkan tanda kurung, dan jika hanya 1 statement, bisa dihilangkan kurung kurawal 
+    // let hai = (hello) =>{
+    //   console.log(hello)
+    // } 
+
+    // jadi seperti ini
+    // let hai = hello => console.log(hello)
+
+    // tanpa parameter
+    // let hai = () => console.log('haii..')
+    
+    // Arrow functions are used as anonymous functions when manipulating arrays.
+
+    let angkas = [1,2,3,4,5]
+
+    let multiple = angkas.map((angka) => angka*2)
+    console.log(multiple)
+
+    // https://medium.com/@thejasonfile/es5-functions-vs-es6-fat-arrow-functions-864033baa1a
+
+    // Calling ‘this.owner’ from within that function doesn’t work. Why? Because ‘this’ is referring to the function that called it which doesn’t know what ‘owner’ is. What needs to happen is that ‘this’ needs to refer to the ‘pets’ object, not the function.
+    
+    // var pets = {
+    //   names: ['Baron', 'Chief', 'Axel'],
+    //   owner: 'Jason',
+    //   description: function(){
+    //     return this.names.map(function(pet){
+    //       return `${this.owner} knows an awesome dog named ${pet}.`
+    //     });
+    //   }
+    // };
+    // console.log(pets.description())
+    // "undefined knows an awesome dog named Baron.", "undefined knows an awesome dog named Chief.", "undefined knows an awesome dog named Axel."
+
+    // 'this' akan diketahui
+    var pets = {
+      names: ['Baron', 'Chief', 'Axel'],
+      owner: 'Jason',
+      description: function(){
+        return this.names.map((pet) => `${this.owner} knows an awesome dog named ${pet}.`);
+      }
+    };
+    console.log(pets.description())
+
+    // Array helper method
+  </script>  
+</body>
+</html>

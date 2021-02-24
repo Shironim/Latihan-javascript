@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOKO GROSIR</title>
+    <style>
+        table, th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        a {
+            cursor: pointer;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Silahkan Input Barang</h1>
+    <td>
+        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <div>
+                <label>Nama Barang</label><label class="validation-error hide" id="namabrgvalidationerror"></label><br>
+                <input type="text" id="namabrg">
+            </div>
+            <div>
+                <label>Jumlah Barang</label><br>
+                <input type="number" id="jumlahbrg">
+            </div>
+            <div>
+                <label>Harga Barang</label><br>
+                <input type="number" id="hargabrg">
+            </div>
+            <div>
+                <label>Loading Barang</label><br>
+                <input type="text" id="loadbrg">
+            </div><br>
+            <div>
+                <input type="submit" value="Tambah">
+            </div>
+        </form>
+    </td>
+    <td>
+        <table id="daftarbrg">
+            <thead>
+                <tr>
+                    <th>Nama Barang</th>
+                    <th>Jumlah Barang</th>
+                    <th>Harga Barang</th>
+                    <th>Loading Barang</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </td>
+    <script src="script.js"></script>
+</body>
+</html>

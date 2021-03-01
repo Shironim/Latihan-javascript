@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Roboto:wght@300;500&display=swap');
+
+
+/* ____________________________________________________CSS______________________________________________________ */
+
+* {
+	font-family: "Roboto";
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* border: 1px solid black; */
+}
+
+.container {
+	width: 1140px;
+	margin: 0 auto;
+}
+.nav-bar {
+	height: 3rem;
+	/* background-color: lawngreen; */
+}
+.nav-container {
+	width: 1140px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center; 
+}
+
+.nav-logo {
+	display: flex;
+	align-items: center;
+}
+.nav-logo a {
+	text-decoration: none;
+	color: black;
+	padding-left: 5px;
+	font-size: 24px;
+
+}
+.nav-logo img{
+	width: 2.3rem;
+	padding-top: 7px;
+	position: relative;
+	top: -3px;
+	
+	
+}
+.nav-menu ul {
+	padding-top: 7px;
+	display: inline-flex;
+	list-style: none;
+	
+}
+.nav-menu ul li {
+	padding-right: 1.9rem;
+	
+}
+.nav-menu ul li a{
+	color :white;
+	text-decoration: none;
+	font-size: 18px;
+	
+}
+.nav-menu ul li:hover {
+	padding-right: 1rem;
+	color: rgb(212, 211, 211);
+	transition: 250ms;
+	pointer-events: auto;
+}
+
+#search {
+	background-image: url(gambar/search.svg);
+	background-repeat: no-repeat;
+	background-position: 190px ;
+	height: 2.4rem;
+	box-shadow: inset 0 1px 2px #0a0a0a1a;
+	border: none;
+	border-radius: 100px;
+	padding-left: 1rem;
+	padding-right: 2.7rem;
+	overflow-x: hidden;
+}
+
+.back-hero {
+	z-index: -999;
+	position: absolute;
+	right: 0px;
+	width: 100%;
+	max-width: 1000px;
+}
+.hero h1{
+	font-size: 60px;
+	padding-top: 16rem;
+	padding-bottom: 4px;
+}
+.hero p{
+	font-size: 20px;
+	padding-bottom: 30px;
+}
+
+.unduh {
+	border: none;
+	background-color: rgb(116, 197, 116);
+	padding: 12px 23px;
+	color: white;
+	border-radius: 4px;
+	font-size: 20px;
+}
+.variasi-kiri img{
+	max-width: 320px;
+	width: 100%;
+	position: absolute;
+	left: -1rem;
+	top: 38rem;
+	z-index: -999;
+}
+.dua {
+	margin-top: 26rem;
+	box-sizing: inherit;
+}
+.tentang-kami{
+	display: flex;
+	align-items: center;
+	margin-left: 38.6rem;
+}
+.tentang-kami img{
+	max-width: 30px;
+	width: 100%;
+}
+.text-tentang-kami {
+	padding-top: 4rem;
+	max-width: 60rem;
+	margin-left: 16em;
+}
+.text-tentang-kami p {
+	text-align: justify;
+}

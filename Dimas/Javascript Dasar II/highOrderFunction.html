@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Js Array Method</title>
+  <h1>High Order Function</h1>
+</head>
+<body>
+  <script>
+    const companies = [
+      {name: "Company One", category: "Finance", start: 1981, end: 2003},
+      {name: "Company Two", category: "Retail", start: 1992, end: 2008},
+      {name: "Company Three", category: "Auto", start: 1999, end: 2007},
+      {name: "Company Four", category: "Retail", start: 1989, end: 2010},
+      {name: "Company Five", category: "Technology", start: 2009, end: 2014},
+      {name: "Company Six", category: "Finance", start: 1987, end: 2010},
+      {name: "Company Seven", category: "Auto", start: 1986, end: 1996},
+      {name: "Company Eight", category: "Technology", start: 2011, end: 2016},
+      {name: "Company Nine", category: "Retail", start: 1981, end: 1989}
+    ];
+
+    const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32]; 
+    // const reduce = (reducer, initial, arr) => {
+    //   // shared stuff
+    //   let acc = initial;
+    //   for (let i = 0, { length } = arr; i < length; i++) {
+    //     // unique stuff in reducer() call
+    //     acc = reducer(acc, arr[i]);
+    //   // more shared stuff
+    //   }
+    //   console.log(acc);
+    // };
+    // reduce((acc, curr) => acc + curr, 0, [1,2,3]);
+
+    // forEach
+    // Sintax
+    // array.forEach(function(currentValue,index,arr),thisValue) -----------
+    // currentValue	Required. The value of the current element
+    // index	Optional. The array index of the current element
+    // arr	Optional. The array object the current element belongs to
+    // thisValue	Optional. A value to be passed to the function to be used as its "this" value.
+    // If this parameter is empty, the value "undefined" will be passed as its "this" value
+
+    // ES5
+      // companies.forEach(function(company){
+      //   console.log(company)
+      // });
+    // ES6 -> Arrow Function
+    // companies.forEach(company => console.log(company))
+
+    // Filter
+    // filter mengembalikan array, elemen yang melewati tes kondisi
+    // ES5
+    // companies.filter(function(company) {
+    //   if (company.category === 'Finance') {
+        // console.log(company) 
+        // tidak dalam bentuk array, setiap company yang melewati tes kondisi langsung di eksekusi di console.log
+    //   }
+    // })
+    // const financeCompany = companies.filter(function(company) {
+    //   if (company.category === 'Finance') {
+    //     return true
+        // mengembalikan array, dimasukan ke dalam variable
+    //   }
+    // })
+    // ES6
+    // const financeCompany = companies.filter(company => company.category === 'Finance')
+    // console.log(financeCompany)
+
+    // const umur = ages.filter(age => age >= 21)
+    // console.log(umur)
+    // Map
+    // Map membuat sebuah array baru dengan hasil dengan memanggil setiap element array
+    // const ageTimesTwo = ages
+    //   .map(age => Math.sqrt(age))
+    //   .map(age => age*2);
+
+    // console.log(ageTimesTwo)
+
+    // sort
+    // const sortedCompanies = companies.sort(function (a, b) {
+    //   if (a.start > b.start) {
+    //     return 1
+    //   }else{
+    //     return -1
+    //   }
+    // });
+
+    // ES6 -> Arrow Function
+    const sortedCompanies = companies.sort((a,b) => a - b)
+    // a - b -> Ascending
+    // b - a -> Descending
+
+    // When comparing 40 and 100, the sort() method calls the compare function(40,100).
+
+    // The function calculates 40-100, and returns -60 (a negative value).
+
+    // The sort function will sort 40 as a value lower than 100.
+    console.log(sortedCompanies)
+
+    // reduce
+    // array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+    
+    // reduce array menjadi sebuah 1 value
+
+    // total	Required. The initialValue, or the previously returned value of the function
+    // currentValue	Required. The value of the current element
+    // currentIndex	Optional. The array index of the current element
+    // arr	Optional. The array object the current element belongs to
+    // initialValue	Optional. A value to be passed to the function as the initial value
+
+    const usia = ages.reduce((total,num) => total + num,0)
+    // menjumlahkan semua usia
+    // console.log(usia)
+    // ES5
+    const totalYears = companies.reduce(function(total,company) {
+      return total + (company.end - company.start);
+    },0);
+
+    // ES6
+    // const totalYears = companies.reduce((total,company) => total + (company.end - company.start),0);
+    // console.log(totalYears)
+
+    const combine = ages
+      .map(age => age * 2)
+      .filter(age => age >= 21)
+      .sort((a,b) => a - b)
+      .reduce((total,num) => total + num,0)
+
+    console.log(combine)
+  </script>
+</body>
+</html>

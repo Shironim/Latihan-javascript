@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <title>Latihan 5 - Perpustakaan Lokal</title>
+  <!-- tutorial : https://www.youtube.com/watch?v=JaMCxVWtW58&t=709s -->
+  <!-- Nambah Edit sendiri hihi -->
 </head>
 <body>
   <div class="container mt-5">
@@ -24,7 +26,8 @@
         <input type="text" id="isbn" class="form-control">
       </div>
 
-      <input type="submit" value="Tambah" class="btn btn-primary">
+      <input type="submit" value="Tambah" class="btn btn-primary tambah">
+      <input type="submit" value="Edit" class="btn btn-info edit">
     </form>
     <table class="table table-striped">
       <thead>
@@ -32,12 +35,14 @@
           <td>Judul</td>
           <td>Penulis</td>
           <td>ISBN#</td>
+          <td></td>
+          <td></td>
         </tr>
       </thead>
       <tbody id="displayBuku"></tbody>
     </table>
   </div>
   <script src="../js/bootstrap.min.js"></script>
-  <script src="latihan5.js"></script>
+  <script src="crud.js"></script>
 </body>
 </html>

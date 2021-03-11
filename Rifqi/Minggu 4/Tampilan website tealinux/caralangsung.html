@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "https://tealinuxos.org/"
+        },
+        "articleSection" : "",
+        "name" : "TeaLinux OS",
+        "headline" : "TeaLinux OS",
+        "description" : "",
+        "inLanguage" : "en-US",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2018",
+        "datePublished": "2018-09-04 15:32:54 &#43;0200 &#43;0200",
+        "dateModified" : "2018-09-04 15:32:54 &#43;0200 &#43;0200",
+        "url" : "https://tealinuxos.org/",
+        "wordCount" : "0",
+        "keywords" : [ "Blog" ]
+    }
+</script>
+<title>TeaLinux OS
+
+</title>
+
+<meta name="description" content="
+">
+
+<meta name="generator" content="Hugo 0.52" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Lato">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://tealinuxos.org/css/bundle.min.37e45e96c5964e9d10e2bb0ffc32e0f9ca869d5a1252b49fa817231ec8906aea6ac0f5459d9fac55e44b357d26aa132da2fd90b8d4c4b327c48df89d3d2992a5.css">
+    </head>
+    <body>
+        <div id="bg-hero">
+        
+
+
+    <nav id="nav" class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="https://tealinuxos.org/" class="navbar-item has-text-weight-semibold">
+                    <img src="https://tealinuxos.org/img/logo.png" alt="logo-tealinux">
+                    TealinuxOS
+                </a>
+                <a role="button" class="navbar-burger" data-target="sidebar" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu" id="navMenu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="/dokumentasi/">Dokumentasi</a>
+                    <a class="navbar-item" href="/kontribusi/">Kontribusi</a>
+                    <a class="navbar-item" target="blank" href="https://medium.com/tealinuxos">Blog</a>
+                    <span class="navbar-item">
+                        <div class="search" >
+                            <input id="search-input" class="input is-rounded form-control" type="text" placeholder="" v-model="txt" @keyup="search()" @blur="close()" maxlength="50">
+                            <div class="search-results" :style="{'display': showresult?'block':'none'}">
+                                <a v-for="item in result" :href="item.url">{{ item.title }}</a>
+                            </div>
+                        </div>
+                        <p class="center"><i class="fas fa-search align-items-center"></i></p>
+                    </span>
+
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+        <section id="sidebar" class="sidebar">
+    <ul class="menu">
+        <li class="judul"><a href="/dokumentasi/">Dokumentasi</a></li>
+        <li class="judul"><a href="/kontribusi/">Kontribusi</a></li>
+        <li class="judul"><a target="blank" href="https://medium.com/tealinuxos">Blog</a></li>
+        
+<span class="navbar-item">
+                        <div class="search" >
+                            <input id="search-input" class="input is-rounded form-control" type="text" placeholder="" v-model="txt" @keyup="search()" @blur="close()" maxlength="50">
+                            <div class="search-results" :style="{'display': showresult?'block':'none'}">
+                                <a v-for="item in result" :href="item.url">{{ item.title }}</a>
+                            </div>
+                        </div>
+                        <p class="center"><i class="fas fa-search align-items-center"></i></p>
+                    </span>
+
+
+        
+    </ul>
+</section>
+
+            
+    <section id="hero" class="header hero is-dark is-fullheight">
+        <div class="hero-body">
+            <div class="container">
+                <p class="title has-text-dark">Tealinux OS</p>
+                <p class="subtitle has-text-dark">Operating System for Your Development Environment</p>
+                <a class="button" href="#resep-tealinux">Unduh</a>
+            </div>
+        </div>
+        <div class="variasi-kiri">
+            <img src="https://tealinuxos.org/img/variasi-kiri.png" alt="variasi-kiri">
+        </div>
+    </section>
+    </div>
+            
+    <section class="about">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-10">
+                    <div class="about-head has-text-centered">
+                        <img src="https://tealinuxos.org/icon/daun.png" width="30px" alt="daun">
+                        <h1 class="title is-inline-block">Tentang Kami</h1>
+                        <p class="has-text-justified">TeaLinuxOS adalah distro Linux turunan Ubuntu yang dikembangkan oleh Dinus Open Source Community (DOSCOM) dan kawan-kawan yang berorientasi pemrograman. Dengan menghadirkan filosofi, “Nikmatnya sebuah racikan”, TeaLinuxOS dikembangkan secara terbuka dan bersama-sama untuk menghasilkan distro Linux pemrograman untuk dunia pendidikan.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-body">
+                <div class="columns is-centered">
+                    <div class="column center has-text-centered is-5">
+                        <img src="https://tealinuxos.org/img/maskot.svg" width="90%" alt="maskot">
+                    </div>
+                    <div class="column flex-column is-5">
+                        <article class="media">
+                            <figure class="media-left">
+                                <div class="circle">
+                                    <img src="https://tealinuxos.org/icon/ap.png" alt="Antipiracy" width="44px"> 
+                                </div>        
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h1 class="title">Antea-piracy</h1>
+                                    <p class="subtitle has-text-justified">The opensource has come true, this is the time to revenge.</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="media">
+                            <figure class="media-left">
+                                    <img src="https://tealinuxos.org/icon/highquality.png" alt="HighQuality" width="44px">
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h1 class="title">High Quality</h1>
+                                    <p class="subtitle has-text-justified">Berangkat dari dukungan dari semua pihak sistem operasi ini mengalami penyempurnaan mejadi sistem operasi yang stabil dan berkualitas.</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="media">
+                            <figure class="media-left">
+                                <img src="https://tealinuxos.org/icon/c.png" alt="Community" width="44px">                                
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h1 class="title">Community</h1>
+                                    <p class="subtitle has-text-justified">Dukungan kuat dari forum dan komunitas dunia virtual maupun komunitas riil menjadikan sistem operasi ini berkembang cepat.</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="media">
+                            <figure class="media-left">
+                                <img src="https://tealinuxos.org/icon/nutrition.png" alt="Nutrition" width="44px" height="44px">                                                                
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h1 class="title">Nutrition</h1>
+                                    <p class="subtitle has-text-justified">Dukungan yang kuat dan tersedianya repository yang lengkap menjadikan sistem operasi ini penuh nutrisi.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            <section class="fitur">
+        <div class="container">
+            <div class="fitur-head has-text-centered">
+                <img src="https://tealinuxos.org/icon/daun.png" width="30px" alt="daun">
+                <h1 class="title is-inline-block">Fitur</h1>
+            </div>
+            <div class="fitur-body">
+                
+                <div class="columns is-variable is-8 is-vcentered">
+                    <div class="column is-5">
+                        <h1 class="title">Tea Module Installer</h1>
+                        <p class="has-text-justified">Tea Module Installer adalah aplikasi yang memudahkan pengguna memasang aplikasi dengan mudah, cepat dan offline. Cukup pasang, hanya yang kamu butuhkan.</p>
+                    </div>
+                    <div class="column is-7">
+                        <div class="bg-fitur1">
+                            <img src="https://tealinuxos.org/img/bg-fitur1.png" width="100%" alt="Tea Module Installer">
+                            <img src="https://tealinuxos.org/fitur/2.2.png" alt="Tea Module Installer">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="columns is-variable is-8 is-vcentered">
+                    <div class="column is-7">
+                        <div class="bg-fitur2">
+                            <img src="https://tealinuxos.org/img/bg-fitur2.png" width="100%" alt="Tea Module Installer">
+                            <video src="https://tealinuxos.org/img/switcher.webm" alt="Tea Module Installer" autoplay="" loop="" width="364"></video>
+                        </div>
+                    </div>
+                    <div class="column is-5">
+                        <h1 class="title">Tea Theme Switcher</h1>
+                        <p class="has-text-justified">Beralih tema dengan sekali klik! Secara bawaan, TeaLinuxOS memiliki dua mode tema, Developer mode (Dark) dan Normal mode (Light). Dengan Theme Switcher ini bergonta-ganti tema semakin cepat dan mudah.</p>
+                    </div>
+                </div>
+                
+                <div class="columns is-variable is-8 is-vcentered">
+                    <div class="column is-5">
+                        <h1 class="title">Fitur Lapor Hama</h1>
+                        <p class="has-text-justified">Lapor Hama merupakan aplikasi untuk pelaporan hama TeaLinuxOS secara umum. Pelaporan menggunakan fitur Issues yang ada pada Github. Penggunaan Github karena memudahkan pengembang & pengguna dalam menyelesaikan & melaporkan suatu hama.</p>
+                    </div>
+                    <div class="column is-7">
+                        <div class="bg-fitur3">
+                            <img src="https://tealinuxos.org/img/bg-fitur3.png" width="100%" alt="Tea Module Installer">
+                            <img src="https://tealinuxos.org/fitur/3.png" alt="Tea Module Installer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            <section id="resep-tealinux" class="resep-tealinux">
+        <div class="container">
+            
+            <div class="resep-body">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="columns">
+                            <div class="column">
+                                <h1 class="title is-size-4">Resep Tea Linux</h1>
+                                <span class="line"></span>
+                                <table>
+                                    <tr>
+                                        
+                                        <td><i class="far fa fa-circle"></i><p class="is-inline-block">Versi</p></td>
+                                        <td>: Tea Linux OS XI</td>
+                                    </tr>
+                                    <tr>
+                                        
+                                        <td><i class="far fa fa-circle"></i><p class="is-inline-block">Codename</p></td>
+                                        <td>: Stevia</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="far fa fa-circle"></i><p class="is-inline-block">Core</p></td>
+                                        <td>: Xubuntu 18.04 LTS</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="far fa fa-circle"></i><p class="is-inline-block">Desktop Environment</p></td>
+                                        <td>: XFCE</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="far fa fa-circle"></i><p class="is-inline-block">Software</p></td>
+                                        <td>: FOSS</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="column has-text-centered">
+                                <img src="https://tealinuxos.org/img/desktop.png" alt="desktop">
+                                <div class="donasi-download">
+                                    <a class="button" target="blank" href="https://www.bountysource.com/teams/tealinuxos">DONASI</a>
+                                    <a class="button" target="blank" href="http://pinguin.dinus.ac.id/iso/tealinuxos/TealinuxOS-11-amd64.iso">UNDUH</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+            <section class="footer">
+        <div class="container">
+
+<div class="columns">
+    <div class="column is-2"></div>
+    <div class="column is-8" align="center">
+        <p>The opensource has come true, this is the time to revenge. Berangkat dari dukungan dari semua pihak sistem operasi ini mengalami penyempurnaan mejadi sistem operasi yang stabil dan berkualitas.</p>
+        <hr>
+ 
+        <p><a href="https://telegram.me/doscom">Contact us</a> - <a href="http://doscom.org/">About us</a> - <a href="http://doscom.org/">Community</a> - <a href="/dokumentasi">Release</a>
+            <br>
+            Released under the <a href="https://opensource.org/licenses/MIT">MIT License.</a> 2009-2018 Maintenance by <a href="http://doscom.org/">Doscom</a></p>  
+    </div>
+  <div class="column is-2" align="right">
+      <a class="button" href=' #hero  '><i class="fas fa-2x fa-chevron-up"></i></a>
+  </div>
+</div>
+
+
+        </div>
+    </section>
+    
+
+
+
+
+
+
+<script src="https://tealinuxos.org/js/bundle.min.5a8588b02c3fd89e1a7cdf270222ec0bad10f5dc152b52dcd9bbcb894219ce72ecae394b0cf11aa58d302992412dc97ab24678928474375e169bf335e6dcced7.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js" integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        AOS.init({
+            
+            disable: false, 
+            startEvent: 'DOMContentLoaded', 
+            initClassName: 'aos-init', 
+            animatedClassName: 'aos-animate', 
+            useClassNames: false, 
+            disableMutationObserver: false, 
+            debounceDelay: 50, 
+            throttleDelay: 99, 
+            
+
+            
+            offset: 120, 
+            delay: 0, 
+            duration: 400, 
+            easing: 'ease', 
+            once: false, 
+            mirror: false, 
+            anchorPlacement: 'top-bottom', 
+
+        });
+                
+        
+        window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth'
+        });
+
+        
+        window.scrollBy({ 
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth' 
+        });
+    </script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js" integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+
+<script>
+let vuesearch = new Vue({
+    el: '.search', 
+    data: {
+        txt: '', 
+        timeoutID: 0, 
+        showresult: false, 
+        result: {}, 
+        bdd: [] 
+        },
+    mounted: function() {
+        
+        axios.get('https:\/\/tealinuxos.org\/search\/index.json')
+        .then(function (response) {
+            vuesearch.bdd = response.data.results;
+            })
+        .catch(function (error) {
+            console.log(error);
+            });
+        },
+    methods: {
+        close: function() {
+            
+            
+            setTimeout(function() {
+                vuesearch.showresult = false;
+                vuesearch.txt = '';
+                }, 300);
+            },
+        search: function() {
+            
+            clearTimeout(this.timeoutID);
+            this.timeoutID = setTimeout(this.dosearch, 500);
+            },
+        dosearch: function() {
+            
+            this.result = []; 
+            let words = this.txt.split(' '); 
+            let words2 = []; 
+            words.forEach(function(element) { 
+                if(element) {words2.push(element);}
+                });
+            let r;
+            let resultmp;
+            words2.forEach(function(e) { 
+                r = vuesearch.bdd.filter(p => p.content.indexOf(e.toLowerCase()) !== -1);
+                if(vuesearch.result.length===0) {vuesearch.result = r.slice(); return;}
+                resultmp = [];
+                vuesearch.result.forEach(function(all1) {
+                    r.forEach(function(all2) { 
+                        if(all1.url===all2.url) {resultmp.push(all1);}
+                        });
+                    });
+                vuesearch.result = resultmp.slice();
+                });
+            this.result = this.result.slice(0, 10); 
+            this.showresult = (this.result.length>0); 
+            } 
+        } 
+    }); 
+</script>
+
+    </body>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+</html>
